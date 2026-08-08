@@ -1,11 +1,13 @@
-/* =========================================
-   BHAWESH BISHT PORTFOLIO
-   CLEAN + FIXED RESPONSIVE STYLE
-========================================= */
+```css
+/* =====================================================
+   BHAWESH SINGH BISHT — PORTFOLIO
+   ONE CSS FOR COMPLETE WEBSITE
+===================================================== */
 
-/* =========================================
+
+/* =====================================================
    RESET
-========================================= */
+===================================================== */
 
 * {
     margin: 0;
@@ -20,7 +22,7 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #050505;
-    color: white;
+    color: #ffffff;
     overflow-x: hidden;
 }
 
@@ -29,16 +31,24 @@ a {
     color: inherit;
 }
 
+img {
+    max-width: 100%;
+}
 
-/* =========================================
+
+/* =====================================================
    NAVBAR
-========================================= */
+===================================================== */
+
+header {
+    width: 100%;
+}
 
 .navbar {
     width: 90%;
     max-width: 1200px;
-    margin: auto;
 
+    margin: auto;
     padding: 25px 0;
 
     display: flex;
@@ -60,14 +70,17 @@ a {
     list-style: none;
 
     display: flex;
+    align-items: center;
+
     gap: 30px;
 }
 
 .nav-links a {
     color: #aaa;
+
     font-size: 13px;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -75,9 +88,9 @@ a {
 }
 
 
-/* =========================================
-   HERO
-========================================= */
+/* =====================================================
+   HOME / HERO
+===================================================== */
 
 .hero {
     width: 90%;
@@ -88,22 +101,24 @@ a {
     margin: auto;
 
     display: flex;
+
     flex-direction: row;
 
     align-items: center;
+
     justify-content: space-between;
 
-    text-align: left;
-
     gap: 60px;
+
+    text-align: left;
 
     padding: 40px 0 70px;
 }
 
 
-/* =========================================
+/* =====================================================
    HERO TEXT
-========================================= */
+===================================================== */
 
 .hero-text {
     max-width: 600px;
@@ -145,21 +160,21 @@ a {
 }
 
 .intro {
-    color: #777;
+    max-width: 550px;
 
-    line-height: 1.8;
+    color: #777;
 
     font-size: 14px;
 
-    max-width: 550px;
+    line-height: 1.8;
 
     margin-bottom: 30px;
 }
 
 
-/* =========================================
+/* =====================================================
    BUTTONS
-========================================= */
+===================================================== */
 
 .buttons {
     display: flex;
@@ -172,6 +187,8 @@ a {
 }
 
 .btn {
+    display: inline-block;
+
     padding: 13px 22px;
 
     border: 1px solid #00ffff;
@@ -182,7 +199,7 @@ a {
 
     font-size: 12px;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .btn:hover {
@@ -190,11 +207,12 @@ a {
 
     color: #000;
 
-    transform: translateY(-3px);
+    transform:
+        translateY(-3px);
 
     box-shadow:
         0 0 25px
-        rgba(0, 255, 255, 0.2);
+        rgba(0, 255, 255, 0.25);
 }
 
 .btn.second {
@@ -212,9 +230,9 @@ a {
 }
 
 
-/* =========================================
+/* =====================================================
    PROFILE PHOTO
-========================================= */
+===================================================== */
 
 .profile-container {
     width: 330px;
@@ -222,14 +240,14 @@ a {
 
     position: relative;
 
+    flex-shrink: 0;
+
     display: flex;
 
     align-items: center;
     justify-content: center;
 
     order: 2;
-
-    flex-shrink: 0;
 
     animation:
         photoFromTop 1.2s ease-out forwards;
@@ -270,9 +288,9 @@ a {
 }
 
 
-/* =========================================
-   FRONT PAGE ANIMATIONS
-========================================= */
+/* =====================================================
+   HOME ANIMATIONS
+===================================================== */
 
 @keyframes photoFromTop {
 
@@ -355,54 +373,42 @@ a {
 }
 
 
-/* =========================================
-   DUMMY / PROJECT SECTION
-========================================= */
-
-.dummy-section {
-    width: 90%;
-
-    max-width: 1000px;
-
-    margin: auto;
-
-    padding: 100px 0;
-
-    text-align: center;
-}
-
-.dummy-section h2 {
-    font-size: 40px;
-
-    margin-bottom: 15px;
-}
-
-.dummy-section p {
-    color: #666;
-}
-
-
-/* =========================================
-   ABOUT PAGE
-========================================= */
+/* =====================================================
+   ALL DETAIL PAGES
+   ABOUT / EDUCATION / LOCATION / CAREER /
+   STATUS / HOBBIES / SKILLS / PROJECTS / CONTACT
+===================================================== */
 
 .about-detail-container {
     width: 90%;
-
     max-width: 1100px;
 
     margin: auto;
 
-    padding: 80px 0;
+    padding: 70px 0;
 }
 
-.detail-page-hero {
-    text-align: center;
+.detail-content {
+    width: 90%;
+    max-width: 900px;
 
+    margin: auto;
+
+    padding: 70px 0;
+}
+
+
+/* =====================================================
+   DETAIL HERO
+===================================================== */
+
+.detail-page-hero {
     max-width: 700px;
 
     margin:
         0 auto 60px;
+
+    text-align: center;
 
     animation:
         aboutAppear 0.8s ease forwards;
@@ -427,6 +433,18 @@ a {
     border-radius: 20px;
 
     font-size: 35px;
+
+    transition: 0.3s ease;
+}
+
+.detail-icon:hover {
+    transform:
+        translateY(-5px)
+        rotate(5deg);
+
+    box-shadow:
+        0 0 30px
+        rgba(0, 255, 255, 0.15);
 }
 
 .detail-label {
@@ -442,6 +460,8 @@ a {
 .detail-page-hero h1 {
     font-size: 60px;
 
+    line-height: 1.1;
+
     margin-bottom: 20px;
 }
 
@@ -452,22 +472,18 @@ a {
 .detail-page-hero p {
     color: #777;
 
-    line-height: 1.8;
-
     font-size: 14px;
+
+    line-height: 1.8;
 }
 
 
-/* =========================================
-   ABOUT OPTIONS
-========================================= */
+/* =====================================================
+   ABOUT OPTION GRID
+===================================================== */
 
 .about-options {
-    width: 90%;
-
-    max-width: 1100px;
-
-    margin: auto;
+    width: 100%;
 
     display: grid;
 
@@ -478,9 +494,9 @@ a {
 }
 
 .about-option {
-    padding: 28px;
-
     min-height: 230px;
+
+    padding: 28px;
 
     border:
         1px solid #222;
@@ -496,12 +512,12 @@ a {
 
     justify-content: space-between;
 
-    transition: 0.4s;
-
     opacity: 0;
 
     animation:
         cardAppear 0.7s ease forwards;
+
+    transition: 0.4s ease;
 }
 
 .about-option:nth-child(1) {
@@ -532,7 +548,8 @@ a {
     transform:
         translateY(-8px);
 
-    border-color: #00ffff;
+    border-color:
+        #00ffff;
 
     box-shadow:
         0 15px 40px
@@ -558,15 +575,17 @@ a {
 
     margin-bottom: 20px;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .about-option:hover
 .about-option-icon {
-    border-color: #00ffff;
+    border-color:
+        #00ffff;
 
     transform:
-        scale(1.1);
+        scale(1.1)
+        rotate(3deg);
 }
 
 .about-option h3 {
@@ -591,6 +610,242 @@ a {
     margin-top: 20px;
 }
 
+
+/* =====================================================
+   DETAIL CARDS
+===================================================== */
+
+.detail-card {
+    padding: 30px;
+
+    margin-bottom: 20px;
+
+    border:
+        1px solid #222;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.02);
+
+    animation:
+        cardAppear 0.7s ease forwards;
+
+    transition: 0.4s ease;
+}
+
+.detail-card:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        #00ffff;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 255, 255, 0.05);
+}
+
+.detail-card h2 {
+    margin-bottom: 15px;
+
+    font-size: 24px;
+}
+
+.detail-card h2 span {
+    color: #00ffff;
+}
+
+.detail-card p {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+}
+
+.detail-card ul {
+    padding-left: 20px;
+
+    color: #777;
+
+    line-height: 2;
+}
+
+.detail-card li::marker {
+    color: #00ffff;
+}
+
+
+/* =====================================================
+   SKILLS
+===================================================== */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 25px;
+
+    border:
+        1px solid #222;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.02);
+
+    transition: 0.4s ease;
+
+    animation:
+        cardAppear 0.7s ease forwards;
+}
+
+.skill-card:hover {
+    transform:
+        translateY(-7px);
+
+    border-color:
+        #00ffff;
+}
+
+.skill-card h3 {
+    color: #00ffff;
+
+    margin-bottom: 12px;
+}
+
+.skill-card p {
+    color: #777;
+
+    line-height: 1.8;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   PROJECTS
+===================================================== */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.project-card {
+    padding: 30px;
+
+    border:
+        1px solid #222;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.02);
+
+    transition: 0.4s ease;
+
+    animation:
+        cardAppear 0.7s ease forwards;
+}
+
+.project-card:hover {
+    transform:
+        translateY(-8px);
+
+    border-color:
+        #00ffff;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 255, 255, 0.08);
+}
+
+.project-card h3 {
+    color: #00ffff;
+
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.contact-card {
+    padding: 30px;
+
+    border:
+        1px solid #222;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.02);
+
+    transition: 0.4s ease;
+
+    animation:
+        cardAppear 0.7s ease forwards;
+}
+
+.contact-card:hover {
+    transform:
+        translateY(-7px);
+
+    border-color:
+        #00ffff;
+}
+
+.contact-card h3 {
+    color: #00ffff;
+
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
 .detail-back {
     display: block;
 
@@ -611,119 +866,26 @@ a {
 
     font-size: 11px;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .detail-back:hover {
     color: #00ffff;
 
-    border-color: #00ffff;
+    border-color:
+        #00ffff;
 
     transform:
         translateY(-3px);
 }
 
 
-/* =========================================
-   ABOUT ANIMATIONS
-========================================= */
-
-@keyframes aboutAppear {
-
-    from {
-        opacity: 0;
-
-        transform:
-            translateY(40px);
-    }
-
-    to {
-        opacity: 1;
-
-        transform:
-            translateY(0);
-    }
-}
-
-@keyframes cardAppear {
-
-    from {
-        opacity: 0;
-
-        transform:
-            translateY(40px);
-    }
-
-    to {
-        opacity: 1;
-
-        transform:
-            translateY(0);
-    }
-}
-
-
-/* =========================================
-   COMMON DETAIL CARDS
-========================================= */
-
-.detail-content {
-    width: 90%;
-
-    max-width: 900px;
-
-    margin: auto;
-
-    padding:
-        70px 0;
-}
-
-.detail-card {
-    padding: 30px;
-
-    margin-bottom: 20px;
-
-    border:
-        1px solid #222;
-
-    border-radius: 20px;
-
-    background:
-        rgba(255, 255, 255, 0.02);
-
-    transition: 0.4s;
-
-    animation:
-        cardAppear 0.7s ease forwards;
-}
-
-.detail-card:hover {
-    border-color: #00ffff;
-
-    transform:
-        translateY(-5px);
-}
-
-.detail-card h2 {
-    margin-bottom: 15px;
-}
-
-.detail-card p {
-    color: #777;
-
-    font-size: 14px;
-
-    line-height: 1.9;
-}
-
-
-/* =========================================
+/* =====================================================
    FOOTER
-========================================= */
+===================================================== */
 
 footer {
     width: 90%;
-
     max-width: 1100px;
 
     margin:
@@ -745,18 +907,54 @@ footer p {
 }
 
 
-/* =========================================
+/* =====================================================
+   DETAIL ANIMATIONS
+===================================================== */
+
+@keyframes aboutAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =====================================================
    TABLET
-========================================= */
+===================================================== */
 
 @media (max-width: 900px) {
 
     .hero {
-        flex-direction: row;
-
         gap: 30px;
-
-        text-align: left;
     }
 
     .hero-text {
@@ -778,25 +976,31 @@ footer p {
         height: 280px;
     }
 
-    .intro {
-        margin:
-            0 0 30px;
-    }
-
-    .buttons {
-        justify-content: flex-start;
-    }
-
     .about-options {
         grid-template-columns:
             repeat(2, 1fr);
     }
+
+    .skills-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns:
+            1fr;
+    }
 }
 
 
-/* =========================================
+/* =====================================================
    MOBILE
-========================================= */
+===================================================== */
 
 @media (max-width: 600px) {
 
@@ -821,49 +1025,55 @@ footer p {
         font-size: 10px;
     }
 
+
+    /* HOME */
+
     .hero {
         width: 90%;
+
+        min-height:
+            auto;
 
         padding:
             30px 0 70px;
 
         gap: 25px;
 
-        flex-direction: column;
+        flex-direction:
+            column;
 
-        text-align: center;
-    }
-
-    .hero-text {
-        max-width: 100%;
-
-        order: 2;
+        text-align:
+            center;
     }
 
     .profile-container {
         order: 1;
 
         width: 250px;
-
         height: 250px;
     }
 
     .profile {
         width: 200px;
-
         height: 200px;
     }
 
     .glow-circle {
         width: 230px;
-
         height: 230px;
+    }
+
+    .hero-text {
+        order: 2;
+
+        max-width: 100%;
     }
 
     .hero h1 {
         font-size: 43px;
 
-        letter-spacing: -2px;
+        letter-spacing:
+            -2px;
     }
 
     .hero h2 {
@@ -878,31 +1088,134 @@ footer p {
     }
 
     .buttons {
-        justify-content: center;
+        justify-content:
+            center;
     }
 
     .btn {
-        min-width: 105px;
+        min-width:
+            105px;
 
         padding:
             12px 15px;
     }
 
-    .about-detail-container {
+
+    /* DETAIL PAGES */
+
+    .about-detail-container,
+    .detail-content {
+        width: 90%;
+
         padding:
             50px 0;
+    }
+
+    .detail-page-hero {
+        margin-bottom:
+            40px;
     }
 
     .detail-page-hero h1 {
         font-size: 43px;
     }
 
+    .detail-page-hero p {
+        font-size: 13px;
+    }
+
     .about-options {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
 
     .about-option {
-        min-height: 210px;
+        min-height:
+            210px;
+    }
+
+    .detail-card {
+        padding:
+            22px;
+    }
+
+    .detail-card h2 {
+        font-size:
+            20px;
+    }
+
+    .detail-card p {
+        font-size:
+            13px;
+    }
+
+    .skills-grid,
+    .projects-grid,
+    .contact-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    footer {
+        margin-top:
+            30px;
     }
 }
 
+
+/* =====================================================
+   VERY SMALL DEVICES
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .logo {
+        font-size:
+            20px;
+    }
+
+    .nav-links {
+        gap:
+            10px;
+    }
+
+    .profile-container {
+        width:
+            220px;
+
+        height:
+            220px;
+    }
+
+    .profile {
+        width:
+            175px;
+
+        height:
+            175px;
+    }
+
+    .glow-circle {
+        width:
+            205px;
+
+        height:
+            205px;
+    }
+
+    .hero h1 {
+        font-size:
+            36px;
+    }
+
+    .hero h2 {
+        font-size:
+            17px;
+    }
+
+    .btn {
+        min-width:
+            100px;
+    }
+}
+```
