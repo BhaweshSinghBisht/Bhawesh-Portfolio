@@ -1,7 +1,10 @@
-
 /* =========================================
    BHAWESH BISHT PORTFOLIO
-   ORIGINAL STYLE
+   CLEAN + FIXED RESPONSIVE STYLE
+========================================= */
+
+/* =========================================
+   RESET
 ========================================= */
 
 * {
@@ -78,23 +81,25 @@ a {
 
 .hero {
     width: 90%;
-    max-width: 1000px;
+    max-width: 1100px;
+
     min-height: calc(100vh - 90px);
 
     margin: auto;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
-    text-align: center;
+    text-align: left;
 
-    gap: 25px;
+    gap: 60px;
 
     padding: 40px 0 70px;
 }
+
 
 /* =========================================
    HERO TEXT
@@ -102,6 +107,8 @@ a {
 
 .hero-text {
     max-width: 600px;
+
+    order: 1;
 
     animation:
         textAppear 1s ease forwards;
@@ -160,6 +167,8 @@ a {
     flex-wrap: wrap;
 
     gap: 12px;
+
+    justify-content: flex-start;
 }
 
 .btn {
@@ -181,12 +190,11 @@ a {
 
     color: #000;
 
-    transform:
-        translateY(-3px);
+    transform: translateY(-3px);
 
     box-shadow:
         0 0 25px
-        rgba(0,255,255,0.2);
+        rgba(0, 255, 255, 0.2);
 }
 
 .btn.second {
@@ -215,20 +223,20 @@ a {
     position: relative;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    order: 1;
+    order: 2;
+
+    flex-shrink: 0;
 
     animation:
         photoFromTop 1.2s ease-out forwards;
 }
 
-
-
 .profile {
     width: 280px;
-
     height: 280px;
 
     object-fit: cover;
@@ -249,7 +257,6 @@ a {
     position: absolute;
 
     width: 330px;
-
     height: 330px;
 
     border-radius: 50%;
@@ -297,11 +304,12 @@ a {
 
 @keyframes photoGlow {
 
-    0%, 100% {
+    0%,
+    100% {
         filter:
             drop-shadow(
                 0 0 5px
-                rgba(0,255,255,0.15)
+                rgba(0, 255, 255, 0.15)
             );
     }
 
@@ -309,7 +317,7 @@ a {
         filter:
             drop-shadow(
                 0 0 25px
-                rgba(0,255,255,0.45)
+                rgba(0, 255, 255, 0.45)
             );
     }
 }
@@ -402,7 +410,6 @@ a {
 
 .detail-icon {
     width: 80px;
-
     height: 80px;
 
     margin:
@@ -456,6 +463,12 @@ a {
 ========================================= */
 
 .about-options {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
     display: grid;
 
     grid-template-columns:
@@ -475,7 +488,7 @@ a {
     border-radius: 20px;
 
     background:
-        rgba(255,255,255,0.02);
+        rgba(255, 255, 255, 0.02);
 
     display: flex;
 
@@ -492,27 +505,27 @@ a {
 }
 
 .about-option:nth-child(1) {
-    animation-delay: .1s;
+    animation-delay: 0.1s;
 }
 
 .about-option:nth-child(2) {
-    animation-delay: .2s;
+    animation-delay: 0.2s;
 }
 
 .about-option:nth-child(3) {
-    animation-delay: .3s;
+    animation-delay: 0.3s;
 }
 
 .about-option:nth-child(4) {
-    animation-delay: .4s;
+    animation-delay: 0.4s;
 }
 
 .about-option:nth-child(5) {
-    animation-delay: .5s;
+    animation-delay: 0.5s;
 }
 
 .about-option:nth-child(6) {
-    animation-delay: .6s;
+    animation-delay: 0.6s;
 }
 
 .about-option:hover {
@@ -523,12 +536,11 @@ a {
 
     box-shadow:
         0 15px 40px
-        rgba(0,255,255,0.08);
+        rgba(0, 255, 255, 0.08);
 }
 
 .about-option-icon {
     width: 55px;
-
     height: 55px;
 
     display: flex;
@@ -545,6 +557,8 @@ a {
     font-size: 25px;
 
     margin-bottom: 20px;
+
+    transition: 0.3s;
 }
 
 .about-option:hover
@@ -597,7 +611,7 @@ a {
 
     font-size: 11px;
 
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .detail-back:hover {
@@ -675,12 +689,12 @@ a {
     border-radius: 20px;
 
     background:
-        rgba(255,255,255,0.02);
+        rgba(255, 255, 255, 0.02);
 
-    transition: .4s;
+    transition: 0.4s;
 
     animation:
-        cardAppear .7s ease forwards;
+        cardAppear 0.7s ease forwards;
 }
 
 .detail-card:hover {
@@ -738,31 +752,45 @@ footer p {
 @media (max-width: 900px) {
 
     .hero {
-        flex-direction: column-reverse;
+        flex-direction: row;
 
-        text-align: center;
+        gap: 30px;
 
-        padding-top: 40px;
+        text-align: left;
     }
 
     .hero-text {
-        max-width: 700px;
+        max-width: 55%;
+    }
+
+    .profile-container {
+        width: 280px;
+        height: 280px;
+    }
+
+    .profile {
+        width: 240px;
+        height: 240px;
+    }
+
+    .glow-circle {
+        width: 280px;
+        height: 280px;
     }
 
     .intro {
         margin:
-            0 auto 30px;
+            0 0 30px;
     }
 
     .buttons {
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .about-options {
         grid-template-columns:
             repeat(2, 1fr);
     }
-
 }
 
 
@@ -800,9 +828,21 @@ footer p {
             30px 0 70px;
 
         gap: 25px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+
+        order: 2;
     }
 
     .profile-container {
+        order: 1;
+
         width: 250px;
 
         height: 250px;
@@ -832,6 +872,9 @@ footer p {
 
     .intro {
         font-size: 13px;
+
+        margin:
+            0 auto 30px;
     }
 
     .buttons {
@@ -861,5 +904,5 @@ footer p {
     .about-option {
         min-height: 210px;
     }
-
 }
+
